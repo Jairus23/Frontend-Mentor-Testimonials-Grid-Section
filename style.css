@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+
+:root {
+    /* primary color */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-graying-blue: hsl(217, 19%, 35%);
+    --very-dark-blacking-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    /* neutral color */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    /* font family */
+    --font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/* main css */
+
+*, body {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    height: 100dvh;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: rgb(213, 234, 234);
+}
+
+/* containers */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1.7rem;
+    column-gap: 2rem;
+    margin: 2rem 3rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100px auto auto;
+    border-radius: 10px;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    background-color: var(--moderate-violet);
+    position: relative;
+}
+
+.two {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    background-color: var(--very-dark-graying-blue);
+}
+
+.three {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: var(--white);
+}
+
+.four {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    background-color: var(--very-dark-blacking-blue);
+}
+
+.five {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    background-color: var(--white);
+}
+
+/* contents */
+
+.status {
+    display: grid;
+    grid-template-columns: 45px auto;
+    grid-template-rows: 25px 25px;
+    height: 50px;
+}
+
+img:not(.svg) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.name {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    align-self: end;
+}
+
+.verified {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-size: 13px;
+    margin: 0;
+    align-self: start;
+}
+
+h1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1;
+    margin: -45px 0 0 0;
+}
+
+.review {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+/* first card */
+
+.one .svg {
+    position: absolute;
+    width: 105px;
+    height: 100px;
+    top: 0;
+    left: 64.5%;
+}
+
+.one img:not(.svg) {
+    border: 2px solid rgba(220, 220, 220, .5);
+}
+
+.one .name {
+    color: rgba(220, 220, 220, 1)
+}
+
+.one .verified {
+    color: rgba(220, 220, 220, .5);
+}
+
+.one h1 {
+    color: rgba(220, 220, 220, 1);
+}
+
+.one .review {
+    color: rgba(220, 220, 220, .7);
+}
+
+/* second card */
+
+.two .name {
+    color: rgba(220, 220, 220, 1)
+}
+
+.two .verified {
+    color: rgba(220, 220, 220, .5);
+}
+
+.two h1 {
+    color: rgba(220, 220, 220, 1);
+}
+
+.two .review {
+    color: rgba(220, 220, 220, .7);
+}
+
+/* third card */
+
+.three .name {
+    color: rgba(90, 90, 90, 1)
+}
+
+.three .verified {
+    color: rgba(90, 90, 90, .5);
+}
+
+.three h1 {
+    color: rgba(90, 90, 90, 1);
+}
+
+.three .review {
+    color: rgba(90, 90, 90, .7);
+}
+
+/* fourth card */
+
+.four img {
+    border: 2px solid var(--moderate-violet);
+}
+
+.four .name {
+    color: rgba(220, 220, 220, 1)
+}
+
+.four .verified {
+    color: rgba(220, 220, 220, .5);
+}
+
+.four h1 {
+    color: rgba(220, 220, 220, 1);
+}
+
+.four .review {
+    color: rgba(220, 220, 220, .7);
+}
+
+/* fifth card */
+
+.five .name {
+    color: rgba(90, 90, 90, 1)
+}
+
+.five .verified {
+    color: rgba(90, 90, 90, .5);
+}
+
+.five h1 {
+    color: rgba(90, 90, 90, 1);
+}
+
+.five .review {
+    color: rgba(90, 90, 90, .7);
+}
+
+/* credits */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    background-color: rgb(213, 234, 234);
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* media query */
+
+@media only screen and (max-width: 800px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        gap: 1rem;
+    }
+    .one .svg {
+        left: 60%;
+    }
+}
